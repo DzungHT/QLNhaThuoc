@@ -1,0 +1,2 @@
+c:\users\sony\documents\visual studio 2015\Projects\QLNhaThuoc\QLNhaThuoc\bin\Debug\QLNhaThuoc.exe.config
+E:\Work\Git\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\bin\Debug\QLNhaThuoc.exe.config
