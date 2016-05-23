@@ -17,3 +17,13 @@ E:\Semester 6\Git\CongNghePhanMem\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLN
 E:\Semester 6\Git\CongNghePhanMem\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.Properties.Resources.resources
 E:\Semester 6\Git\CongNghePhanMem\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.Views.Main.resources
 E:\Semester 6\Git\CongNghePhanMem\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.csproj.GenerateResource.Cache
+D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\bin\Debug\QLNhaThuoc.exe.config
+D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.exe
+D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.pdb
+D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\bin\Debug\QLNhaThuoc.exe
+D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\bin\Debug\QLNhaThuoc.pdb
+D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.csprojResolveAssemblyReference.cache
+D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.Properties.Resources.resources
+D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.Views.Main.resources
+D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.csproj.GenerateResource.Cache
+D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.Views.Login.Login.resources
