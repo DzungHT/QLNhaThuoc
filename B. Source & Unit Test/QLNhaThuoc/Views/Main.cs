@@ -12,9 +12,19 @@ namespace QLNhaThuoc.Views
 {
     public partial class Main : Form
     {
+        Login frmLogin = new Login();
+        About UC_about = new About();
+        BanThuoc UC_banthuoc = new BanThuoc();
+        
         public Main()
         {
             InitializeComponent();
+            UC_about.Dock = DockStyle.Fill;
+            UC_banthuoc.Dock = DockStyle.Fill;
+            frmLogin.passData = PassData;
+            frmLogin.ShowDialog();
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(UC_about);
         }
         private void PassData(object sender,string acc)
         {
@@ -24,14 +34,11 @@ namespace QLNhaThuoc.Views
                 MenuItem_Giaodich.Enabled = true;
                 MenuItem_Quanlykho.Enabled = true;
                 MenuItem_Thongkebaocao.Enabled = true;
-                label12.Text = "Đã đăng nhập";
             }
         }
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Login.Login frmLogin = new Login.Login();
-            frmLogin.passData = PassData;
-            frmLogin.ShowDialog();
+            
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -39,5 +46,16 @@ namespace QLNhaThuoc.Views
             this.Dispose();
         }
 
+        private void thôngTinPhầnMềmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(UC_about);
+        }
+
+        private void bánThuốcToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(UC_banthuoc);
+        }
     }
 }

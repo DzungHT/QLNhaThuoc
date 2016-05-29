@@ -27,3 +27,6 @@ D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QL
 D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.Views.Main.resources
 D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.csproj.GenerateResource.Cache
 D:\Github\BaoCaoMonCNPM\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.Views.Login.Login.resources
+E:\Work\Git\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.Views.About.resources
+E:\Work\Git\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.Views.Login.resources
+E:\Work\Git\QLNhaThuoc\B. Source & Unit Test\QLNhaThuoc\obj\Debug\QLNhaThuoc.Views.BanThuoc.resources

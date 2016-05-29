@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLNhaThuoc.Views.Login
+namespace QLNhaThuoc.Views
 {
     public partial class Login : Form
     {
@@ -17,6 +17,7 @@ namespace QLNhaThuoc.Views.Login
         public Login()
         {
             InitializeComponent();
+            textBox1.Focus();
         }
         public bool checkForm(string acc, string pass)
         {
@@ -55,8 +56,33 @@ namespace QLNhaThuoc.Views.Login
                 {
                     MessageBox.Show("Đăng nhập thành công");
                     passData(true, "OK");
-                    this.Close();
+                    this.Dispose();
                 }
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar)
+            {
+                case (char)13:
+                    textBox1.Text = string.Empty;
+                    textBox1.Focus();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar)
+            {
+                case (char)13:
+                    button1_Click(new { }, new EventArgs());
+                    break;
+                default:
+                    break;
             }
         }
     }
