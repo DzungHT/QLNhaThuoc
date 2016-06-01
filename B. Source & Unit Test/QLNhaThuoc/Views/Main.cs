@@ -16,6 +16,7 @@ namespace QLNhaThuoc.Views
         Account cur_acc;
         Login login;
         About about = new About();
+        BanThuoc banthuoc;
         public Main()
         {
             InitializeComponent();
@@ -25,15 +26,15 @@ namespace QLNhaThuoc.Views
             login.passData = passLogin;
             login.ShowDialog();
             // init about
-            MainPanel.Controls.Add(about);
             about.Dock = DockStyle.Fill;
+            MainPanel.Controls.Add(about);
 
 
         }
         private void passLogin(Account acc)
         {
             cur_acc = acc;
-            toolStripStatusLabel2.Text = cur_acc.Username;
+            toolStripStatusLabel2.Text = cur_acc.Nhanviens.ToList()[0].Hoten;
             if (cur_acc.Level == 1)
             {
                 quảnLýTàiKhoảnToolStripMenuItem.Enabled = true;
@@ -69,7 +70,32 @@ namespace QLNhaThuoc.Views
 
         private void bánHàngToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            
+            banthuoc = new BanThuoc();
+            banthuoc.Dock = DockStyle.Fill;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(banthuoc);
+        }
+
+        private void nhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Nhapthuoc nhapthuoc = new Nhapthuoc();
+            nhapthuoc.Dock = DockStyle.Fill;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(nhapthuoc);
+        }
+
+        private void quảnLýThuốcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Quanlythuoc quanlythuoc = new Quanlythuoc();
+            quanlythuoc.Dock = DockStyle.Fill;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(quanlythuoc);
+        }
+
+        private void thôngTinPhầnMềmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(about);
         }
     }
 }

@@ -46,6 +46,9 @@ namespace QLNhaThuoc.Views
             else
             {
                 MessageBox.Show("Tên đăng nhập,mật khẩu không đúng!");
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox2.Focus();
                 return false;
             }
         }
