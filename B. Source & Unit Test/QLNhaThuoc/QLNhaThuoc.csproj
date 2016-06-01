@@ -63,10 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\ThuocAPI.cs" />
+    <Compile Include="Business\APIs.cs" />
     <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\CTHoadonbanthuoc.cs" />
     <Compile Include="Entities\CTHoadonnhapthuoc.cs" />
+    <Compile Include="Entities\Global.cs" />
     <Compile Include="Entities\Hoadonbanthuoc.cs" />
     <Compile Include="Entities\Hoadonnhapthuoc.cs" />
     <Compile Include="Entities\Khachhang.cs" />
@@ -108,6 +109,30 @@
     <Compile Include="Views\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Nhapthuoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Nhapthuoc.Designer.cs">
+      <DependentUpon>Nhapthuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QLHoadonBH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\QLHoadonBH.Designer.cs">
+      <DependentUpon>QLHoadonBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyNhanVien.Designer.cs">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Quanlythuoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Quanlythuoc.Designer.cs">
+      <DependentUpon>Quanlythuoc.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -132,6 +157,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Nhapthuoc.resx">
+      <DependentUpon>Nhapthuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QLHoadonBH.resx">
+      <DependentUpon>QLHoadonBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyNhanVien.resx">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Quanlythuoc.resx">
+      <DependentUpon>Quanlythuoc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

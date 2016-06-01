@@ -17,15 +17,16 @@ namespace QLNhaThuoc.Views
         bool IsInsert;
         private void LoadData()
         {
-            dataGridView1.DataSource = ThuocAPI.LstThuoc();
             dataGridView1.AutoGenerateColumns = false;
-            
+            dataGridView1.DataSource = APIs.LstThuoc();
+            listView1.Items.Clear();
+            RefreshInfoForm();
         }
         private void SetDataInfoForm(Thuoc t,int num)
         {
             txtTenthuoc.Text = t.Tenthuoc;
             txtDvt.Text = t.Donvitinh;
-            txtDongia.Text = t.Dongia.ToString();
+            txtDongia.Text = (t.Dongia * 1000).ToString();
             numericUpDown2.Value = num;
             numericUpDown2.Maximum = (t.Soluong.HasValue?(decimal)t.Soluong:0);
             btnOK.Enabled = true;
@@ -60,7 +61,7 @@ namespace QLNhaThuoc.Views
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             int id = int.Parse(dataGridView1.CurrentRow.Cells["ThuocID"].Value.ToString());
-            currThuoc = ThuocAPI.GetThuocByID(id)[0];
+            currThuoc = APIs.GetThuocByID(id)[0];
             IsInsert = true;
             SetDataInfoForm(currThuoc,0);
         }
@@ -105,7 +106,7 @@ namespace QLNhaThuoc.Views
         {
             int ID =int.Parse(listView1.SelectedItems[0].Text);
             int numm = int.Parse(listView1.SelectedItems[0].SubItems[2].Text);
-            currThuoc = ThuocAPI.GetThuocByID(ID)[0];
+            currThuoc = APIs.GetThuocByID(ID)[0];
             SetDataInfoForm(currThuoc, numm);
             IsInsert = false;
         }
@@ -123,5 +124,78 @@ namespace QLNhaThuoc.Views
                 RefreshInfoForm();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Bạn muốn thanh toán?","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+            if (dialog == DialogResult.OK)
+            {
+                if (listView1.Items.Count != 0)
+                {
+                    Global.lstItemBuy.Clear();
+                    foreach(ListViewItem it in listView1.Items)
+                    {
+                        Thuoc sp = APIs.GetThuocByID(int.Parse(it.Text))[0];
+                        sp.Soluong = int.Parse(it.SubItems[2].Text);
+                        Global.lstItemBuy.Add(sp);
+                    }
+                    if (checkBox1.Checked)
+                    {
+                        Global.khachhangID = APIs.GetKhachhangByName(comboKhachhang.Text).KhachhangID;
+                        Global.Tenkhachhang = comboKhachhang.Text;
+                        Global.Diachi = APIs.GetKhachhangByName(comboKhachhang.Text).Diachi;
+                    }
+                    else
+                    {
+                        if (textBoxKhachhang.Text == "" || textBoxDiachi.Text == "")
+                        {
+                            MessageBox.Show("Bạn chưa nhập thông tin khách hàng!");
+                            return;
+                        }
+                        Global.khachhangID = 1;
+                        Global.Tenkhachhang = textBoxKhachhang.Text;
+                        Global.Diachi = textBoxDiachi.Text;
+                    }
+                    
+                    Hoadon hd = new Hoadon();
+                    hd.passData = PassData;
+                    hd.ShowDialog();                   
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chưa chọn món hàng nào!");
+                }
+            }
+        }
+        private void PassData(object sender)
+        {
+            bool ok = (bool)sender;
+            if (ok)
+                LoadData();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBoxDiachi.Visible = false;
+                textBoxKhachhang.Visible = false;
+                label9.Visible = false;
+                comboKhachhang.Visible = true;
+                List<Khachhang> lst = APIs.LstKhachhang();
+                foreach (Khachhang item in lst)
+                {
+                    comboKhachhang.Items.Add(item.Tenkhachhang);
+                }
+            }
+            else
+            {
+                textBoxDiachi.Visible = true;
+                textBoxKhachhang.Visible = true;
+                label9.Visible = true;
+                comboKhachhang.Visible = false;
+            }
+        }
+        
     }
 }

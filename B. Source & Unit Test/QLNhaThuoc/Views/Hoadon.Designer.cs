@@ -36,10 +36,10 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
+            this.txtTennhanvien = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -54,10 +54,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtYear = new System.Windows.Forms.Label();
+            this.txtMonth = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtDay = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,6 +75,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Hủy bỏ";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // columnHeader6
             // 
@@ -115,15 +116,15 @@
             this.label16.TabIndex = 2;
             this.label16.Text = "VNĐ";
             // 
-            // label15
+            // txtTotal
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(479, 7);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(17, 17);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "0";
+            this.txtTotal.AutoSize = true;
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(479, 7);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(17, 17);
+            this.txtTotal.TabIndex = 1;
+            this.txtTotal.Text = "0";
             // 
             // label14
             // 
@@ -143,20 +144,21 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "In hóa đơn";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label22
+            // txtTennhanvien
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(507, 361);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(101, 13);
-            this.label22.TabIndex = 12;
-            this.label22.Text = "Nguyễn Quang Huy";
+            this.txtTennhanvien.AutoSize = true;
+            this.txtTennhanvien.Location = new System.Drawing.Point(507, 361);
+            this.txtTennhanvien.Name = "txtTennhanvien";
+            this.txtTennhanvien.Size = new System.Drawing.Size(101, 13);
+            this.txtTennhanvien.TabIndex = 12;
+            this.txtTennhanvien.Text = "Nguyễn Quang Huy";
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.txtTennhanvien);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.label20);
@@ -174,9 +176,9 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(105, 361);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(69, 13);
+            this.label21.Size = new System.Drawing.Size(70, 13);
             this.label21.TabIndex = 11;
-            this.label21.Text = "Đinh Thị Yến";
+            this.label21.Text = "Đinh Hải Yến";
             // 
             // label19
             // 
@@ -201,9 +203,9 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(480, 304);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(137, 13);
+            this.label18.Size = new System.Drawing.Size(116, 13);
             this.label18.TabIndex = 3;
-            this.label18.Text = "Họ tên nhân viên bán hàng";
+            this.label18.Text = "Họ tên người bán hàng";
             // 
             // label17
             // 
@@ -218,7 +220,7 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.txtTotal);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Location = new System.Drawing.Point(0, 270);
             this.panel3.Name = "panel3";
@@ -250,10 +252,10 @@
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.txtYear);
+            this.panel1.Controls.Add(this.txtMonth);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.txtDay);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -286,9 +288,9 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(160, 65);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 13);
+            this.label11.Size = new System.Drawing.Size(70, 13);
             this.label11.TabIndex = 10;
-            this.label11.Text = "Đinh Thị Yến";
+            this.label11.Text = "Đinh Hải Yến";
             // 
             // label10
             // 
@@ -308,23 +310,23 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Hà Nội";
             // 
-            // label8
+            // txtYear
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(402, 40);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "...";
+            this.txtYear.AutoSize = true;
+            this.txtYear.Location = new System.Drawing.Point(402, 40);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(16, 13);
+            this.txtYear.TabIndex = 7;
+            this.txtYear.Text = "...";
             // 
-            // label7
+            // txtMonth
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(347, 40);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(16, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "...";
+            this.txtMonth.AutoSize = true;
+            this.txtMonth.Location = new System.Drawing.Point(347, 40);
+            this.txtMonth.Name = "txtMonth";
+            this.txtMonth.Size = new System.Drawing.Size(16, 13);
+            this.txtMonth.TabIndex = 6;
+            this.txtMonth.Text = "...";
             // 
             // label6
             // 
@@ -335,14 +337,14 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "năm";
             // 
-            // label5
+            // txtDay
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(290, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "...";
+            this.txtDay.AutoSize = true;
+            this.txtDay.Location = new System.Drawing.Point(290, 40);
+            this.txtDay.Name = "txtDay";
+            this.txtDay.Size = new System.Drawing.Size(16, 13);
+            this.txtDay.TabIndex = 4;
+            this.txtDay.Text = "...";
             // 
             // label4
             // 
@@ -390,6 +392,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Hoadon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hoadon";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -411,10 +414,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label txtTotal;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label txtTennhanvien;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label19;
@@ -429,10 +432,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label txtYear;
+        private System.Windows.Forms.Label txtMonth;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label txtDay;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
