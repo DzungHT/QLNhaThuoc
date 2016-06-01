@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNhaThuoc.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,33 +13,39 @@ namespace QLNhaThuoc.Views
 {
     public partial class Main : Form
     {
-        Login frmLogin = new Login();
-        About UC_about = new About();
-        BanThuoc UC_banthuoc = new BanThuoc();
-        
+        Account cur_acc;
+        Login login;
+        About about = new About();
         public Main()
         {
             InitializeComponent();
-            UC_about.Dock = DockStyle.Fill;
-            UC_banthuoc.Dock = DockStyle.Fill;
-            frmLogin.passData = PassData;
-            frmLogin.ShowDialog();
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(UC_about);
+
+            // show login
+            login = new Login();
+            login.passData = passLogin;
+            login.ShowDialog();
+            // init about
+            MainPanel.Controls.Add(about);
+            about.Dock = DockStyle.Fill;
+
+
         }
-        private void PassData(object sender,string acc)
+        private void passLogin(Account acc)
         {
-            bool ok = (bool)sender;
-            if (ok)
+            cur_acc = acc;
+            toolStripStatusLabel2.Text = cur_acc.Username;
+            if (cur_acc.Level == 1)
             {
-                MenuItem_Giaodich.Enabled = true;
-                MenuItem_Quanlykho.Enabled = true;
-                MenuItem_Thongkebaocao.Enabled = true;
+                quảnLýTàiKhoảnToolStripMenuItem.Enabled = true;
             }
-        }
-        private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
+            else
+            {
+                quảnLýTàiKhoảnToolStripMenuItem.Enabled = false;
+            }
+            bánHàngToolStripMenuItem.Enabled = true;
+            khoHàngToolStripMenuItem.Enabled = true;
+            đăngNhậpToolStripMenuItem.Visible = false;
+            đăngXuấtToolStripMenuItem.Visible = true;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,16 +53,23 @@ namespace QLNhaThuoc.Views
             this.Dispose();
         }
 
-        private void thôngTinPhầnMềmToolStripMenuItem_Click(object sender, EventArgs e)
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(UC_about);
+            cur_acc = null;
+            toolStripStatusLabel2.Text = string.Empty;
+            quảnLýTàiKhoảnToolStripMenuItem.Enabled = false;
+            bánHàngToolStripMenuItem.Enabled        = false;
+            khoHàngToolStripMenuItem.Enabled        = false;
+            đăngXuấtToolStripMenuItem.Visible       = false;
+            đăngNhậpToolStripMenuItem.Visible = true;
+            login = new Login();
+            login.passData = passLogin;
+            login.ShowDialog();
         }
 
-        private void bánThuốcToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void bánHàngToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(UC_banthuoc);
+            
         }
     }
 }
