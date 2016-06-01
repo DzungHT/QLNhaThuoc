@@ -27,7 +27,17 @@ namespace QLNhaThuoc.Views
             txtDvt.Text = t.Donvitinh;
             txtDongia.Text = t.Dongia.ToString();
             numericUpDown2.Value = num;
-            numericUpDown2.Maximum = (decimal)t.Soluong;
+            numericUpDown2.Maximum = (t.Soluong.HasValue?(decimal)t.Soluong:0);
+            btnOK.Enabled = true;
+            btnCancel.Enabled = true;
+        }
+        private void RefreshInfoForm(){
+            txtTenthuoc.Text = "_______";
+            txtDvt.Text = "_______";
+            txtDongia.Text = "_______";
+            numericUpDown2.Value = 0;
+            btnOK.Enabled = false;
+            btnCancel.Enabled = false;
         }
         private void CountMoney()
         {
@@ -70,6 +80,7 @@ namespace QLNhaThuoc.Views
                     {
                         it.SubItems[2].Text = (int.Parse(it.SubItems[2].Text) + currThuoc.Soluong).ToString();
                         CountMoney();
+                        RefreshInfoForm();
                         return;
                     }
                 }
@@ -80,21 +91,37 @@ namespace QLNhaThuoc.Views
                 item.SubItems.Add(currThuoc.Dongia.ToString());
                 listView1.Items.Add(item);
                 CountMoney();
+                RefreshInfoForm();
             }
             else
             {
                 listView1.SelectedItems[0].SubItems[2].Text = numericUpDown2.Value.ToString();
                 CountMoney();
+                RefreshInfoForm();
             }
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int ID =int.Parse(listView1.FocusedItem.Text);
+            int ID =int.Parse(listView1.SelectedItems[0].Text);
             int numm = int.Parse(listView1.SelectedItems[0].SubItems[2].Text);
             currThuoc = ThuocAPI.GetThuocByID(ID)[0];
             SetDataInfoForm(currThuoc, numm);
             IsInsert = false;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            if (IsInsert)
+            {
+                RefreshInfoForm();
+            }
+            else
+            {
+                listView1.SelectedItems[0].Remove();
+                CountMoney();
+                RefreshInfoForm();
+            }
         }
     }
 }
