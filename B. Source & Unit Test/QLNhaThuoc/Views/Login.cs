@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNhaThuoc.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,8 @@ namespace QLNhaThuoc.Views
 {
     public partial class Login : Form
     {
-        public delegate void PassData(object sender, string acc);
+        Account cur_acc;
+        public delegate void PassData(Account acc);
         public PassData passData;
         public Login()
         {
@@ -33,13 +35,20 @@ namespace QLNhaThuoc.Views
         }
         public bool checkAccount(string acc, string pass)
         {
-            if (acc.Equals("admin") && pass.Equals("admin"))
+            MyData db = new MyData();
+            var query = db.Accounts.Where(x => x.Username == acc && x.Password == pass).ToList();
+            if (query.Count == 1)
             {
+                cur_acc = query[0];
+                cur_acc.Password = "";
                 return true;
             }
             else
             {
                 MessageBox.Show("Tên đăng nhập,mật khẩu không đúng!");
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox2.Focus();
                 return false;
             }
         }
@@ -54,7 +63,7 @@ namespace QLNhaThuoc.Views
             {
                 if (checkAccount(textBox2.Text, textBox1.Text))
                 {
-                    passData(true, "OK");
+                    passData(cur_acc);
                     this.Dispose();
                 }
             }

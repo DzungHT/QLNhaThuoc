@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNhaThuoc.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,33 +13,40 @@ namespace QLNhaThuoc.Views
 {
     public partial class Main : Form
     {
-        Login frmLogin = new Login();
-        About UC_about = new About();
-        BanThuoc UC_banthuoc = new BanThuoc();
-        
+        Account cur_acc;
+        Login login;
+        About about = new About();
+        BanThuoc banthuoc;
         public Main()
         {
             InitializeComponent();
-            UC_about.Dock = DockStyle.Fill;
-            UC_banthuoc.Dock = DockStyle.Fill;
-            frmLogin.passData = PassData;
-            frmLogin.ShowDialog();
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(UC_about);
+
+            // show login
+            login = new Login();
+            login.passData = passLogin;
+            login.ShowDialog();
+            // init about
+            about.Dock = DockStyle.Fill;
+            MainPanel.Controls.Add(about);
+
+
         }
-        private void PassData(object sender,string acc)
+        private void passLogin(Account acc)
         {
-            bool ok = (bool)sender;
-            if (ok)
+            cur_acc = acc;
+            toolStripStatusLabel2.Text = cur_acc.Nhanviens.ToList()[0].Hoten;
+            if (cur_acc.Level == 1)
             {
-                MenuItem_Giaodich.Enabled = true;
-                MenuItem_Quanlykho.Enabled = true;
-                MenuItem_Thongkebaocao.Enabled = true;
+                quảnLýTàiKhoảnToolStripMenuItem.Enabled = true;
             }
-        }
-        private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
+            else
+            {
+                quảnLýTàiKhoảnToolStripMenuItem.Enabled = false;
+            }
+            bánHàngToolStripMenuItem.Enabled = true;
+            khoHàngToolStripMenuItem.Enabled = true;
+            đăngNhậpToolStripMenuItem.Visible = false;
+            đăngXuấtToolStripMenuItem.Visible = true;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,16 +54,48 @@ namespace QLNhaThuoc.Views
             this.Dispose();
         }
 
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cur_acc = null;
+            toolStripStatusLabel2.Text = string.Empty;
+            quảnLýTàiKhoảnToolStripMenuItem.Enabled = false;
+            bánHàngToolStripMenuItem.Enabled        = false;
+            khoHàngToolStripMenuItem.Enabled        = false;
+            đăngXuấtToolStripMenuItem.Visible       = false;
+            đăngNhậpToolStripMenuItem.Visible = true;
+            login = new Login();
+            login.passData = passLogin;
+            login.ShowDialog();
+        }
+
+        private void bánHàngToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            banthuoc = new BanThuoc();
+            banthuoc.Dock = DockStyle.Fill;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(banthuoc);
+        }
+
+        private void nhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Nhapthuoc nhapthuoc = new Nhapthuoc();
+            nhapthuoc.Dock = DockStyle.Fill;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(nhapthuoc);
+        }
+
+        private void quảnLýThuốcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Quanlythuoc quanlythuoc = new Quanlythuoc();
+            quanlythuoc.Dock = DockStyle.Fill;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(quanlythuoc);
+        }
+
         private void thôngTinPhầnMềmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(UC_about);
-        }
-
-        private void bánThuốcToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(UC_banthuoc);
+            MainPanel.Controls.Add(about);
         }
     }
 }
