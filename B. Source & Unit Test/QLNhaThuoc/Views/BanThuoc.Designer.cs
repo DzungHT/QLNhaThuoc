@@ -71,6 +71,8 @@
             this.colTenthuoc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSoluong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colDongia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -82,10 +84,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.button1);
@@ -100,11 +104,11 @@
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.Controls.Add(this.groupBox4);
+            this.panel5.Controls.Add(this.groupBox5);
             this.panel5.Controls.Add(this.groupBox3);
             this.panel5.Location = new System.Drawing.Point(318, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(761, 109);
+            this.panel5.Size = new System.Drawing.Size(761, 132);
             this.panel5.TabIndex = 3;
             // 
             // groupBox4
@@ -112,9 +116,9 @@
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Location = new System.Drawing.Point(365, 4);
+            this.groupBox4.Location = new System.Drawing.Point(318, 138);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(396, 105);
+            this.groupBox4.Size = new System.Drawing.Size(761, 126);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tìm kiếm";
@@ -135,7 +139,7 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Location = new System.Drawing.Point(0, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(358, 105);
+            this.groupBox3.Size = new System.Drawing.Size(358, 128);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin sản phẩm đã chọn";
@@ -237,9 +241,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.panel4);
             this.groupBox2.Controls.Add(this.panel3);
-            this.groupBox2.Location = new System.Drawing.Point(318, 115);
+            this.groupBox2.Location = new System.Drawing.Point(318, 270);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(761, 481);
+            this.groupBox2.Size = new System.Drawing.Size(761, 326);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách sản phẩm";
@@ -254,7 +258,7 @@
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(6, 451);
+            this.panel4.Location = new System.Drawing.Point(6, 296);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(749, 24);
             this.panel4.TabIndex = 1;
@@ -325,7 +329,7 @@
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Location = new System.Drawing.Point(6, 19);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(749, 426);
+            this.panel3.Size = new System.Drawing.Size(749, 271);
             this.panel3.TabIndex = 0;
             // 
             // dataGridView1
@@ -346,7 +350,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(749, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(749, 271);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
@@ -521,6 +525,26 @@
             this.colDongia.Text = "Đơn giá(x1000)";
             this.colDongia.Width = 104;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.checkBox1);
+            this.groupBox5.Location = new System.Drawing.Point(365, 3);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(396, 129);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Thông tin khách hàng";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(6, 18);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(125, 17);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Là khách hàng quen";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // BanThuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,6 +566,8 @@
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -591,5 +617,7 @@
         private System.Windows.Forms.ColumnHeader colTenthuoc;
         private System.Windows.Forms.ColumnHeader colSoluong;
         private System.Windows.Forms.ColumnHeader colDongia;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
