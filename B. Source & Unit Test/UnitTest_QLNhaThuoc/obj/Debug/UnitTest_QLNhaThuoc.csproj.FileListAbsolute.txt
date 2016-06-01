@@ -1,7 +1,0 @@
-E:\Work\Git\QLNhaThuoc\B. Source & Unit Test\UnitTest_QLNhaThuoc\bin\Debug\UnitTest_QLNhaThuoc.dll
-E:\Work\Git\QLNhaThuoc\B. Source & Unit Test\UnitTest_QLNhaThuoc\bin\Debug\UnitTest_QLNhaThuoc.pdb
-E:\Work\Git\QLNhaThuoc\B. Source & Unit Test\UnitTest_QLNhaThuoc\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-E:\Work\Git\QLNhaThuoc\B. Source & Unit Test\UnitTest_QLNhaThuoc\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
-E:\Work\Git\QLNhaThuoc\B. Source & Unit Test\UnitTest_QLNhaThuoc\obj\Debug\UnitTest_QLNhaThuoc.csprojResolveAssemblyReference.cache
-E:\Work\Git\QLNhaThuoc\B. Source & Unit Test\UnitTest_QLNhaThuoc\obj\Debug\UnitTest_QLNhaThuoc.dll
-E:\Work\Git\QLNhaThuoc\B. Source & Unit Test\UnitTest_QLNhaThuoc\obj\Debug\UnitTest_QLNhaThuoc.pdb
