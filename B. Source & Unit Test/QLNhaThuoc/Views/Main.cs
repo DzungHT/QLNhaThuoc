@@ -34,6 +34,7 @@ namespace QLNhaThuoc.Views
         private void passLogin(Account acc)
         {
             cur_acc = acc;
+            Global.nhanvienID = acc.AccountID;
             toolStripStatusLabel2.Text = cur_acc.Nhanviens.ToList()[0].Hoten;
             if (cur_acc.Level == 1)
             {
@@ -103,6 +104,14 @@ namespace QLNhaThuoc.Views
         {
             QuanLyNhanVien qlnv = new QuanLyNhanVien();
             qlnv.Show();
+        }
+
+        private void xemHóaĐơnBánHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QLHoadonBH qlhoadonbh = new QLHoadonBH();
+            qlhoadonbh.Dock = DockStyle.Fill;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(qlhoadonbh);
         }
     }
 }

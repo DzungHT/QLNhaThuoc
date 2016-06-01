@@ -140,6 +140,7 @@
             this.xemHóaĐơnBánHàngToolStripMenuItem.Name = "xemHóaĐơnBánHàngToolStripMenuItem";
             this.xemHóaĐơnBánHàngToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.xemHóaĐơnBánHàngToolStripMenuItem.Text = "Xem hóa đơn bán hàng";
+            this.xemHóaĐơnBánHàngToolStripMenuItem.Click += new System.EventHandler(this.xemHóaĐơnBánHàngToolStripMenuItem_Click);
             // 
             // khoHàngToolStripMenuItem
             // 
