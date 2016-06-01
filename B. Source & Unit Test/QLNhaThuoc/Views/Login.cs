@@ -54,7 +54,6 @@ namespace QLNhaThuoc.Views
             {
                 if (checkAccount(textBox2.Text, textBox1.Text))
                 {
-                    MessageBox.Show("Đăng nhập thành công");
                     passData(true, "OK");
                     this.Dispose();
                 }
