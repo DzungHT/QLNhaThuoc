@@ -79,6 +79,7 @@ namespace QLNhaThuoc.Views
         private void nhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Nhapthuoc nhapthuoc = new Nhapthuoc();
+            nhapthuoc.SetNguoiNhap(cur_acc.Nhanviens.ToList()[0].Hoten);
             nhapthuoc.Dock = DockStyle.Fill;
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(nhapthuoc);
@@ -96,6 +97,12 @@ namespace QLNhaThuoc.Views
         {
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(about);
+        }
+
+        private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyNhanVien qlnv = new QuanLyNhanVien();
+            qlnv.Show();
         }
     }
 }
