@@ -25,6 +25,10 @@ namespace QLNhaThuoc.Entities
 
         public float? Thanhtien { get; set; }
 
+        public string NgayvietStr { get { return Ngayviet.Value.ToString("dd/MM/yyyy"); } }
+
+        public string ThanhtienStr { get { return (Thanhtien.Value * 1000).ToString("N3"); } }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHoadonbanthuoc> CTHoadonbanthuocs { get; set; }
 

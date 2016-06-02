@@ -43,6 +43,10 @@ namespace QLNhaThuoc.Entities
 
         public int? Soluong { get; set; }
 
+        public string NgaysanxuatStr { get { return ((DateTime)Ngaysanxuat).ToString("dd/MM/yyyy"); } }
+
+        public string NgayhethanStr { get { return ((DateTime)Ngayhethan).ToString("dd/MM/yyyy"); } }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHoadonbanthuoc> CTHoadonbanthuocs { get; set; }
 

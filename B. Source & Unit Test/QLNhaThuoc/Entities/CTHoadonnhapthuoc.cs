@@ -23,6 +23,17 @@ namespace QLNhaThuoc.Entities
 
         public float? Dongia { get; set; }
 
+        public string Tenthuoc { get { return Thuoc.Tenthuoc; } }
+
+        public string Noisanxuat { get { return Thuoc.Noisanxuat; } }
+
+        public string NgaysanxuatStr { get { return Thuoc.NgaysanxuatStr; } }
+
+        public string NgayhethanStr { get { return Thuoc.NgayhethanStr; } }
+
+        public string Donvitinh { get { return Thuoc.Donvitinh; } }
+
+
         public virtual Hoadonnhapthuoc Hoadonnhapthuoc { get; set; }
 
         public virtual Thuoc Thuoc { get; set; }

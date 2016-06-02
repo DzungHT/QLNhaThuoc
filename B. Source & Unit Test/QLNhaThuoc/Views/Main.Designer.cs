@@ -42,7 +42,6 @@
             this.khoHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhậpHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xemHóaĐơnNhậpHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýThuốcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giúpĐỡToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinPhầnMềmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -146,8 +145,7 @@
             // 
             this.khoHàngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nhậpHàngToolStripMenuItem,
-            this.xemHóaĐơnNhậpHàngToolStripMenuItem,
-            this.quảnLýThuốcToolStripMenuItem});
+            this.xemHóaĐơnNhậpHàngToolStripMenuItem});
             this.khoHàngToolStripMenuItem.Enabled = false;
             this.khoHàngToolStripMenuItem.Name = "khoHàngToolStripMenuItem";
             this.khoHàngToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
@@ -165,13 +163,7 @@
             this.xemHóaĐơnNhậpHàngToolStripMenuItem.Name = "xemHóaĐơnNhậpHàngToolStripMenuItem";
             this.xemHóaĐơnNhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.xemHóaĐơnNhậpHàngToolStripMenuItem.Text = "Xem hóa đơn nhập hàng";
-            // 
-            // quảnLýThuốcToolStripMenuItem
-            // 
-            this.quảnLýThuốcToolStripMenuItem.Name = "quảnLýThuốcToolStripMenuItem";
-            this.quảnLýThuốcToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.quảnLýThuốcToolStripMenuItem.Text = "Quản lý thuốc";
-            this.quảnLýThuốcToolStripMenuItem.Click += new System.EventHandler(this.quảnLýThuốcToolStripMenuItem_Click);
+            this.xemHóaĐơnNhậpHàngToolStripMenuItem.Click += new System.EventHandler(this.xemHóaĐơnNhậpHàngToolStripMenuItem_Click);
             // 
             // giúpĐỡToolStripMenuItem
             // 
@@ -254,7 +246,6 @@
         private System.Windows.Forms.ToolStripMenuItem khoHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhậpHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xemHóaĐơnNhậpHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýThuốcToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem giúpĐỡToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinPhầnMềmToolStripMenuItem;
         private System.Windows.Forms.Panel MainPanel;

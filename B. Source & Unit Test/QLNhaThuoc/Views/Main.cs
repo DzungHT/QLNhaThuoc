@@ -113,5 +113,13 @@ namespace QLNhaThuoc.Views
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(qlhoadonbh);
         }
+
+        private void xemHóaĐơnNhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XemHDNhap x = new XemHDNhap();
+            x.Dock = DockStyle.Fill;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(x);
+        }
     }
 }
