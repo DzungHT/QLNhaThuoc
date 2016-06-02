@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using QLNhaThuoc.Entities;
 using System.ComponentModel;
 using System.Data.Entity;
+using System.Data.Linq.SqlClient;
 namespace QLNhaThuoc.Business
 { 
    public class APIs
@@ -17,6 +18,13 @@ namespace QLNhaThuoc.Business
             var q = from s in mydata.Thuocs
                     select s;
             var list = new BindingList<Thuoc>(q.ToList());
+            return list;
+        }
+        public static List<Nhomthuoc> LstNhomThuoc()
+        {
+            var q = from s in mydata.Nhomthuocs
+                    select s;
+            var list = q.ToList();
             return list;
         }
        public static List<Thuoc> GetThuocByID(int ID){
@@ -92,6 +100,7 @@ namespace QLNhaThuoc.Business
        {
 
            var q = from s in mydata.Hoadonbanthuocs
+                   orderby s.HoadonbanthuocID descending
                    select s;
            var list = new BindingList<Hoadonbanthuoc>(q.ToList());
            return list;
@@ -102,6 +111,16 @@ namespace QLNhaThuoc.Business
                    where s.HoadonbanthuocID == ID
                    select s;
            return q.ToList();
+       }
+       public static BindingList<Thuoc> Search(string str)
+       {
+           var q = from s in mydata.Thuocs
+                   where s.Tenthuoc.Contains(str)
+                   //SqlMethods.Like(s.Tenthuoc,("%"+str+"%"))
+                   //     || SqlMethods.Like(s.Nhomthuoc.Tennhomthuoc, ("%" + str + "%"))
+                   select s;
+           var list = new BindingList<Thuoc>(q.ToList());
+           return list;
        }
     }
 }
