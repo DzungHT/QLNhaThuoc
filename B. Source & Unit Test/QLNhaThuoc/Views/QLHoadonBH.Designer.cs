@@ -48,9 +48,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.HoadonbanthuocID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ngayviet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KhachhangID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NhanvienID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ngayviet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tennhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tenkhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -67,9 +67,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HoadonbanthuocID,
+            this.Ngayviet,
             this.KhachhangID,
             this.NhanvienID,
-            this.Ngayviet,
             this.Tennhanvien,
             this.Tenkhachhang});
             this.dataGridView1.Location = new System.Drawing.Point(3, 21);
@@ -247,22 +247,7 @@
             this.HoadonbanthuocID.HeaderText = "Hóa đơn ID";
             this.HoadonbanthuocID.Name = "HoadonbanthuocID";
             this.HoadonbanthuocID.ReadOnly = true;
-            // 
-            // KhachhangID
-            // 
-            this.KhachhangID.DataPropertyName = "KhachhangID";
-            this.KhachhangID.HeaderText = "KhachhangID";
-            this.KhachhangID.Name = "KhachhangID";
-            this.KhachhangID.ReadOnly = true;
-            this.KhachhangID.Visible = false;
-            // 
-            // NhanvienID
-            // 
-            this.NhanvienID.DataPropertyName = "NhanvienID";
-            this.NhanvienID.HeaderText = "NhanvienID";
-            this.NhanvienID.Name = "NhanvienID";
-            this.NhanvienID.ReadOnly = true;
-            this.NhanvienID.Visible = false;
+            this.HoadonbanthuocID.Width = 110;
             // 
             // Ngayviet
             // 
@@ -270,7 +255,23 @@
             this.Ngayviet.HeaderText = "Ngày xuất hóa đơn";
             this.Ngayviet.Name = "Ngayviet";
             this.Ngayviet.ReadOnly = true;
-            this.Ngayviet.Width = 150;
+            this.Ngayviet.Width = 200;
+            // 
+            // KhachhangID
+            // 
+            this.KhachhangID.DataPropertyName = "KhachhangID";
+            this.KhachhangID.HeaderText = "Khách hàng";
+            this.KhachhangID.Name = "KhachhangID";
+            this.KhachhangID.ReadOnly = true;
+            this.KhachhangID.Width = 160;
+            // 
+            // NhanvienID
+            // 
+            this.NhanvienID.DataPropertyName = "NhanvienID";
+            this.NhanvienID.HeaderText = "Nhân viên";
+            this.NhanvienID.Name = "NhanvienID";
+            this.NhanvienID.ReadOnly = true;
+            this.NhanvienID.Width = 160;
             // 
             // Tennhanvien
             // 
@@ -278,6 +279,7 @@
             this.Tennhanvien.HeaderText = "Nhân viên";
             this.Tennhanvien.Name = "Tennhanvien";
             this.Tennhanvien.ReadOnly = true;
+            this.Tennhanvien.Visible = false;
             this.Tennhanvien.Width = 180;
             // 
             // Tenkhachhang
@@ -286,6 +288,7 @@
             this.Tenkhachhang.HeaderText = "Khách hàng";
             this.Tenkhachhang.Name = "Tenkhachhang";
             this.Tenkhachhang.ReadOnly = true;
+            this.Tenkhachhang.Visible = false;
             this.Tenkhachhang.Width = 200;
             // 
             // QLHoadonBH
@@ -328,9 +331,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoadonbanthuocID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ngayviet;
         private System.Windows.Forms.DataGridViewTextBoxColumn KhachhangID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NhanvienID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ngayviet;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tennhanvien;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tenkhachhang;
 

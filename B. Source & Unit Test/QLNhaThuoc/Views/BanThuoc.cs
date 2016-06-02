@@ -196,6 +196,26 @@ namespace QLNhaThuoc.Views
                 comboKhachhang.Visible = false;
             }
         }
+
+        private void textBoxTenthuoc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxTenthuoc.Text))
+            {
+                dataGridView1.DataSource = APIs.LstThuoc();
+                dataGridView1.Refresh();
+            }
+            else
+            {
+                string str = textBoxTenthuoc.Text;
+                dataGridView1.DataSource = APIs.Search(str);
+                dataGridView1.Refresh();
+            }
+        }
         
     }
 }

@@ -32,6 +32,11 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textBoxDiachi = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxKhachhang = new System.Windows.Forms.TextBox();
+            this.comboKhachhang = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -47,14 +52,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ThuocID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Donvitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ngaysanxuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ngayhethan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Congdung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -66,12 +63,19 @@
             this.colTenthuoc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSoluong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colDongia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboKhachhang = new System.Windows.Forms.ComboBox();
-            this.textBoxKhachhang = new System.Windows.Forms.TextBox();
-            this.textBoxDiachi = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxTenthuoc = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.ThuocID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Donvitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ngaysanxuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ngayhethan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Congdung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -101,9 +105,12 @@
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.textBoxTenthuoc);
+            this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(318, 138);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(761, 126);
+            this.groupBox4.Size = new System.Drawing.Size(761, 92);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tìm kiếm";
@@ -133,6 +140,47 @@
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thông tin khách hàng";
+            // 
+            // textBoxDiachi
+            // 
+            this.textBoxDiachi.Location = new System.Drawing.Point(109, 71);
+            this.textBoxDiachi.Name = "textBoxDiachi";
+            this.textBoxDiachi.Size = new System.Drawing.Size(159, 20);
+            this.textBoxDiachi.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(20, 77);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Địa chỉ:";
+            // 
+            // textBoxKhachhang
+            // 
+            this.textBoxKhachhang.Location = new System.Drawing.Point(109, 40);
+            this.textBoxKhachhang.Name = "textBoxKhachhang";
+            this.textBoxKhachhang.Size = new System.Drawing.Size(159, 20);
+            this.textBoxKhachhang.TabIndex = 3;
+            // 
+            // comboKhachhang
+            // 
+            this.comboKhachhang.FormattingEnabled = true;
+            this.comboKhachhang.Location = new System.Drawing.Point(109, 40);
+            this.comboKhachhang.Name = "comboKhachhang";
+            this.comboKhachhang.Size = new System.Drawing.Size(159, 21);
+            this.comboKhachhang.TabIndex = 2;
+            this.comboKhachhang.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 46);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Khách hàng: ";
             // 
             // checkBox1
             // 
@@ -170,7 +218,7 @@
             // 
             this.btnCancel.Location = new System.Drawing.Point(282, 76);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(61, 23);
+            this.btnCancel.Size = new System.Drawing.Size(70, 34);
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Hủy bỏ";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -178,9 +226,9 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(215, 76);
+            this.btnOK.Location = new System.Drawing.Point(206, 76);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(61, 23);
+            this.btnOK.Size = new System.Drawing.Size(70, 34);
             this.btnOK.TabIndex = 9;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -262,9 +310,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.panel3);
-            this.groupBox2.Location = new System.Drawing.Point(318, 270);
+            this.groupBox2.Location = new System.Drawing.Point(318, 236);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(761, 326);
+            this.groupBox2.Size = new System.Drawing.Size(761, 360);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách sản phẩm";
@@ -277,7 +325,7 @@
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Location = new System.Drawing.Point(6, 19);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(749, 301);
+            this.panel3.Size = new System.Drawing.Size(749, 335);
             this.panel3.TabIndex = 0;
             // 
             // dataGridView1
@@ -288,76 +336,20 @@
             this.Tenthuoc,
             this.Donvitinh,
             this.Dongia,
+            this.Soluong,
             this.Ngaysanxuat,
             this.Ngayhethan,
-            this.Congdung,
-            this.Soluong});
+            this.Congdung});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(749, 301);
+            this.dataGridView1.Size = new System.Drawing.Size(749, 335);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // ThuocID
-            // 
-            this.ThuocID.DataPropertyName = "ThuocID";
-            this.ThuocID.HeaderText = "ID";
-            this.ThuocID.Name = "ThuocID";
-            this.ThuocID.ReadOnly = true;
-            // 
-            // Tenthuoc
-            // 
-            this.Tenthuoc.DataPropertyName = "Tenthuoc";
-            this.Tenthuoc.HeaderText = "Tên thuốc";
-            this.Tenthuoc.Name = "Tenthuoc";
-            this.Tenthuoc.ReadOnly = true;
-            // 
-            // Donvitinh
-            // 
-            this.Donvitinh.DataPropertyName = "Donvitinh";
-            this.Donvitinh.HeaderText = "Đơn vị tính";
-            this.Donvitinh.Name = "Donvitinh";
-            this.Donvitinh.ReadOnly = true;
-            // 
-            // Dongia
-            // 
-            this.Dongia.DataPropertyName = "Dongia";
-            this.Dongia.HeaderText = "Đơn giá";
-            this.Dongia.Name = "Dongia";
-            this.Dongia.ReadOnly = true;
-            // 
-            // Ngaysanxuat
-            // 
-            this.Ngaysanxuat.DataPropertyName = "Ngaysanxuat";
-            this.Ngaysanxuat.HeaderText = "Ngày sản xuất";
-            this.Ngaysanxuat.Name = "Ngaysanxuat";
-            this.Ngaysanxuat.ReadOnly = true;
-            // 
-            // Ngayhethan
-            // 
-            this.Ngayhethan.DataPropertyName = "Ngayhethan";
-            this.Ngayhethan.HeaderText = "Ngày hết hạn";
-            this.Ngayhethan.Name = "Ngayhethan";
-            this.Ngayhethan.ReadOnly = true;
-            // 
-            // Congdung
-            // 
-            this.Congdung.DataPropertyName = "Congdung";
-            this.Congdung.HeaderText = "Công dụng";
-            this.Congdung.Name = "Congdung";
-            this.Congdung.ReadOnly = true;
-            // 
-            // Soluong
-            // 
-            this.Soluong.DataPropertyName = "Soluong";
-            this.Soluong.HeaderText = "Số lượng";
-            this.Soluong.Name = "Soluong";
-            this.Soluong.ReadOnly = true;
             // 
             // button1
             // 
@@ -474,46 +466,89 @@
             this.colDongia.Text = "Đơn giá(x1000)";
             this.colDongia.Width = 104;
             // 
-            // label7
+            // label1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 46);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Khách hàng: ";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(57, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(286, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nhập từ khóa cần tìm kiếm về tên thuốc hoặc nhóm thuốc:";
             // 
-            // comboKhachhang
+            // textBoxTenthuoc
             // 
-            this.comboKhachhang.FormattingEnabled = true;
-            this.comboKhachhang.Location = new System.Drawing.Point(109, 40);
-            this.comboKhachhang.Name = "comboKhachhang";
-            this.comboKhachhang.Size = new System.Drawing.Size(159, 21);
-            this.comboKhachhang.TabIndex = 2;
-            this.comboKhachhang.Visible = false;
+            this.textBoxTenthuoc.Location = new System.Drawing.Point(60, 34);
+            this.textBoxTenthuoc.Multiline = true;
+            this.textBoxTenthuoc.Name = "textBoxTenthuoc";
+            this.textBoxTenthuoc.Size = new System.Drawing.Size(436, 40);
+            this.textBoxTenthuoc.TabIndex = 1;
+            this.textBoxTenthuoc.TextChanged += new System.EventHandler(this.textBoxTenthuoc_TextChanged);
             // 
-            // textBoxKhachhang
+            // button3
             // 
-            this.textBoxKhachhang.Location = new System.Drawing.Point(109, 40);
-            this.textBoxKhachhang.Name = "textBoxKhachhang";
-            this.textBoxKhachhang.Size = new System.Drawing.Size(159, 20);
-            this.textBoxKhachhang.TabIndex = 3;
+            this.button3.Location = new System.Drawing.Point(513, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(70, 55);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "OK";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBoxDiachi
+            // ThuocID
             // 
-            this.textBoxDiachi.Location = new System.Drawing.Point(109, 71);
-            this.textBoxDiachi.Name = "textBoxDiachi";
-            this.textBoxDiachi.Size = new System.Drawing.Size(159, 20);
-            this.textBoxDiachi.TabIndex = 5;
+            this.ThuocID.DataPropertyName = "ThuocID";
+            this.ThuocID.HeaderText = "ID";
+            this.ThuocID.Name = "ThuocID";
+            this.ThuocID.ReadOnly = true;
             // 
-            // label9
+            // Tenthuoc
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(20, 77);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Địa chỉ:";
+            this.Tenthuoc.DataPropertyName = "Tenthuoc";
+            this.Tenthuoc.HeaderText = "Tên thuốc";
+            this.Tenthuoc.Name = "Tenthuoc";
+            this.Tenthuoc.ReadOnly = true;
+            // 
+            // Donvitinh
+            // 
+            this.Donvitinh.DataPropertyName = "Donvitinh";
+            this.Donvitinh.HeaderText = "Đơn vị tính";
+            this.Donvitinh.Name = "Donvitinh";
+            this.Donvitinh.ReadOnly = true;
+            // 
+            // Dongia
+            // 
+            this.Dongia.DataPropertyName = "Dongia";
+            this.Dongia.HeaderText = "Đơn giá";
+            this.Dongia.Name = "Dongia";
+            this.Dongia.ReadOnly = true;
+            // 
+            // Soluong
+            // 
+            this.Soluong.DataPropertyName = "Soluong";
+            this.Soluong.HeaderText = "Số lượng";
+            this.Soluong.Name = "Soluong";
+            this.Soluong.ReadOnly = true;
+            // 
+            // Ngaysanxuat
+            // 
+            this.Ngaysanxuat.DataPropertyName = "Ngaysanxuat";
+            this.Ngaysanxuat.HeaderText = "Ngày sản xuất";
+            this.Ngaysanxuat.Name = "Ngaysanxuat";
+            this.Ngaysanxuat.ReadOnly = true;
+            // 
+            // Ngayhethan
+            // 
+            this.Ngayhethan.DataPropertyName = "Ngayhethan";
+            this.Ngayhethan.HeaderText = "Ngày hết hạn";
+            this.Ngayhethan.Name = "Ngayhethan";
+            this.Ngayhethan.ReadOnly = true;
+            // 
+            // Congdung
+            // 
+            this.Congdung.DataPropertyName = "Congdung";
+            this.Congdung.HeaderText = "Công dụng";
+            this.Congdung.Name = "Congdung";
+            this.Congdung.ReadOnly = true;
             // 
             // BanThuoc
             // 
@@ -523,6 +558,8 @@
             this.Name = "BanThuoc";
             this.Size = new System.Drawing.Size(1091, 613);
             this.panel1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -555,14 +592,6 @@
         private System.Windows.Forms.Label txtTotal;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThuocID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tenthuoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Donvitinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dongia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ngaysanxuat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ngayhethan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Congdung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Soluong;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
@@ -584,5 +613,16 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxDiachi;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBoxTenthuoc;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThuocID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tenthuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Donvitinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dongia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Soluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ngaysanxuat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ngayhethan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Congdung;
     }
 }
